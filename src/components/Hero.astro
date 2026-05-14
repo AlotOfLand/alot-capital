@@ -6,15 +6,18 @@ const headlines = [
 ];
 ---
 
-<section class="topo-bg relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
+<section class="topo-bg relative min-h-[calc(100vh-7rem)] md:min-h-[calc(100vh-9rem)] flex items-center overflow-hidden">
   <div class="absolute inset-0 bg-gradient-to-b from-bg-dark/30 via-transparent to-bg-dark pointer-events-none"></div>
 
   <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 md:py-24 text-center">
     <p class="eyebrow mb-6">A Lot of Land LLC · Middle Tennessee</p>
 
-    <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-white max-w-4xl mx-auto min-h-[140px] sm:min-h-[160px] md:min-h-[200px] lg:min-h-[220px]">
+    <h1 class="relative font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-white max-w-4xl mx-auto h-[180px] sm:h-[180px] md:h-[220px] lg:h-[260px]">
       {headlines.map((line, i) => (
-        <span class={`hero-line block ${i === 0 ? 'opacity-100' : 'opacity-0 absolute inset-x-0'}`} data-idx={i}>
+        <span
+          class={`hero-line absolute inset-0 flex items-center justify-center text-center px-2 ${i === 0 ? 'opacity-100' : 'opacity-0'}`}
+          data-idx={i}
+        >
           {line}
         </span>
       ))}
