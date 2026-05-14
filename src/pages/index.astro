@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import BenefitsBanner from '../components/BenefitsBanner.astro';
+import LeadMagnet from '../components/LeadMagnet.astro';
+import WhyLand from '../components/WhyLand.astro';
+import UniqueAdvantages from '../components/UniqueAdvantages.astro';
+import DavidStory from '../components/DavidStory.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import DealFlow from '../components/DealFlow.astro';
+import FAQ from '../components/FAQ.astro';
+import StayConnected from '../components/StayConnected.astro';
+---
+
+<Layout>
+  <!-- Hidden form for Netlify to register at build time -->
+  <form name="lead-magnet" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="firstName" />
+    <input type="email" name="email" />
+  </form>
+
+  <Hero />
+  <BenefitsBanner />
+  <LeadMagnet />
+  <WhyLand />
+  <UniqueAdvantages />
+  <DavidStory />
+  <HowItWorks />
+  <DealFlow />
+  <FAQ />
+  <StayConnected />
+</Layout>

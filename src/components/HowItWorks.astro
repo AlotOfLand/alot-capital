@@ -1,0 +1,50 @@
+---
+const steps = [
+  {
+    n: '1',
+    title: 'Request an Invitation',
+    body: 'Tell us a little about yourself and your investment goals. We review every application personally and reach out within a few days.',
+  },
+  {
+    n: '2',
+    title: "Let's Talk",
+    body: "A simple get-to-know-you call. No numbers, no deals, no pressure. We just want to make sure it's a fit — for both of us.",
+  },
+  {
+    n: '3',
+    title: 'Review Opportunities',
+    body: 'When a deal matches your goals, we walk you through it in plain English — the land, the plan, the return structure, the timeline. You decide.',
+  },
+  {
+    n: '4',
+    title: 'Fund and Earn',
+    body: 'Place your capital. We handle everything. You receive your return at closing or per the deal structure. We do all the heavy lifting while your capital works.',
+  },
+];
+---
+
+<section class="section bg-bg-dark">
+  <div class="container-narrow">
+    <div class="text-center mb-14 md:mb-16 reveal">
+      <p class="eyebrow mb-4">The Process</p>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">How It Works</h2>
+      <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
+        Simple. Transparent. No pressure.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+      {steps.map((s) => (
+        <div class="reveal relative bg-surface border border-border-dark rounded-2xl p-7 hover:border-gold/40 transition-colors">
+          <div class="font-display text-6xl md:text-7xl text-gold/80 leading-none mb-4">{s.n}</div>
+          <h3 class="font-display text-xl md:text-2xl text-white mb-3 leading-tight">{s.title}</h3>
+          <p class="text-text-muted leading-relaxed text-sm md:text-base">{s.body}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12 md:mt-14 reveal">
+      <a href="/request-invitation" class="btn-gold text-base">Request an Invitation</a>
+    </div>
+  </div>
+</section>

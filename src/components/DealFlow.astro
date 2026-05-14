@@ -1,0 +1,48 @@
+---
+const deals = [
+  {
+    label: 'Active',
+    title: 'Middle Tennessee Land Portfolio',
+    body: 'Multiple parcels under contract and listed across Middle Tennessee. Active acquisition, subdivision planning, and disposition underway.',
+    stat: 'Multiple active positions',
+  },
+  {
+    label: 'In Progress',
+    title: 'Subdivision Project — Middle Tennessee',
+    body: 'Multi-acre subdivision project with private funding partners secured. Lot creation, survey, and sales process underway.',
+    stat: 'Private capital deployed',
+  },
+];
+---
+
+<section class="section bg-surface">
+  <div class="container-narrow">
+    <div class="text-center mb-12 md:mb-14 reveal">
+      <p class="eyebrow mb-4">Transparency</p>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6">Active Deals & Deal History</h2>
+      <p class="text-base md:text-lg text-white/75 max-w-3xl mx-auto leading-relaxed">
+        We are a growing company and we're proud to be transparent about exactly where we are. Every investor who has trusted us has done so on the strength of our deal structure, our transparency, and our systems. Here's what we can show you today.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5 md:gap-6 max-w-5xl mx-auto">
+      {deals.map((d) => (
+        <div class="reveal bg-bg-dark border border-border-dark rounded-2xl p-7 md:p-8 hover:border-gold/40 transition-colors">
+          <div class="flex items-center gap-2 mb-5">
+            <span class="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+            <span class="text-xs font-semibold tracking-[0.18em] uppercase text-gold">{d.label}</span>
+          </div>
+          <h3 class="font-display text-2xl md:text-3xl text-white mb-4 leading-tight">{d.title}</h3>
+          <p class="text-text-muted leading-relaxed mb-6">{d.body}</p>
+          <div class="pt-5 border-t border-border-dark">
+            <p class="font-mono text-sm text-white/90">{d.stat}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-center text-text-muted text-sm md:text-base max-w-2xl mx-auto mt-12 reveal italic">
+      As deals close and returns are delivered, this section will grow into a full track record. We'd rather show you something real and small than something polished and vague.
+    </p>
+  </div>
+</section>

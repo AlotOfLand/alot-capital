@@ -1,0 +1,70 @@
+---
+const headlines = [
+  'We help Middle Tennessee business owners create passive income from land.',
+  'We help Middle Tennessee business owners build generational wealth through real estate.',
+  'We help Middle Tennessee business owners put their capital to work — without another job.',
+];
+---
+
+<section class="topo-bg relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg-dark/30 via-transparent to-bg-dark pointer-events-none"></div>
+
+  <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 md:py-24 text-center">
+    <p class="eyebrow mb-6">A Lot of Land LLC · Middle Tennessee</p>
+
+    <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-white max-w-4xl mx-auto min-h-[140px] sm:min-h-[160px] md:min-h-[200px] lg:min-h-[220px]">
+      {headlines.map((line, i) => (
+        <span class={`hero-line block ${i === 0 ? 'opacity-100' : 'opacity-0 absolute inset-x-0'}`} data-idx={i}>
+          {line}
+        </span>
+      ))}
+    </h1>
+
+    <p class="mt-8 text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+      Private land investments. Simple structures. Real returns.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="#lead-magnet" class="btn-gold w-full sm:w-auto text-base">Get the Free Guide</a>
+      <a href="/request-invitation" class="btn-outline w-full sm:w-auto text-base">Request an Invitation</a>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-3 text-white/85 text-sm">
+        <span class="text-2xl" aria-hidden="true">📍</span>
+        <span>Active Deals in Middle Tennessee</span>
+      </div>
+      <div class="flex items-center justify-center gap-3 text-white/85 text-sm">
+        <span class="text-2xl" aria-hidden="true">📄</span>
+        <span>Author, <em class="not-italic font-semibold">The Dirt Investor</em></span>
+      </div>
+      <div class="flex items-center justify-center gap-3 text-white/85 text-sm">
+        <span class="text-2xl" aria-hidden="true">🤝</span>
+        <span>Private Capital — Direct Access to David</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center text-white/40 text-xs animate-bounce">
+    <span class="mb-1">Scroll</span>
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    const lines = document.querySelectorAll('.hero-line');
+    if (lines.length < 2) return;
+    let idx = 0;
+    setInterval(() => {
+      lines[idx].classList.remove('opacity-100');
+      lines[idx].classList.add('opacity-0');
+      idx = (idx + 1) % lines.length;
+      lines[idx].classList.remove('opacity-0');
+      lines[idx].classList.add('opacity-100');
+    }, 3500);
+    document.querySelectorAll('.hero-line').forEach((el) => {
+      el.style.transition = 'opacity 700ms ease';
+    });
+  })();
+</script>

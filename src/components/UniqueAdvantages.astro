@@ -1,0 +1,60 @@
+---
+const advantages = [
+  {
+    icon: '☎️',
+    title: 'You Deal With David Directly',
+    body: 'No investor relations department. No account managers. When you have a question, David picks up.',
+  },
+  {
+    icon: '📌',
+    title: 'Geographically Focused',
+    body: "We operate exclusively in Middle Tennessee. Deep market knowledge. No distracted capital chasing trends in markets we don't know.",
+  },
+  {
+    icon: '📜',
+    title: 'Simple, Transparent Structures',
+    body: "No complicated waterfalls. No jargon. You'll understand exactly what you're getting, when you get it, and how it's secured.",
+  },
+  {
+    icon: '🏗️',
+    title: "We Create Value — We Don't Speculate",
+    body: 'Every deal has a clear path to appreciation. We know the return before we deploy capital.',
+  },
+  {
+    icon: '🛡️',
+    title: 'Investor-First Mindset',
+    body: 'Your capital and your return come first. Every deal structure is built around protecting you.',
+  },
+  {
+    icon: '🎬',
+    title: 'Producer-Level Execution',
+    body: 'David has managed multi-million dollar projects with large teams from concept to completion — five times in film, now in land. That same discipline runs every deal.',
+  },
+];
+---
+
+<section class="section bg-bg-dark">
+  <div class="container-narrow">
+    <div class="text-center mb-14 md:mb-16 reveal">
+      <p class="eyebrow mb-4">The Difference</p>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">The A Lot of Land Difference</h2>
+      <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
+        Why business owners choose to work with us
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+      {advantages.map((a) => (
+        <div class="reveal bg-surface border border-border-dark rounded-2xl p-7 hover:border-gold/40 hover:-translate-y-1 transition-all duration-200">
+          <div class="text-4xl mb-4" aria-hidden="true">{a.icon}</div>
+          <h3 class="font-display text-xl md:text-2xl text-white mb-3 leading-tight">{a.title}</h3>
+          <p class="text-text-muted leading-relaxed text-sm md:text-base">{a.body}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12 md:mt-14 reveal">
+      <a href="/request-invitation" class="btn-gold text-base">Request an Invitation</a>
+    </div>
+  </div>
+</section>

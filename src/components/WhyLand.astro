@@ -1,0 +1,51 @@
+---
+const pillars = [
+  {
+    icon: '🗺️',
+    title: "Nobody's Making More of It",
+    body: 'Supply is fixed. As Middle Tennessee grows, well-positioned land becomes one of the most valuable assets in the region.',
+  },
+  {
+    icon: '📈',
+    title: 'We Force the Value Up',
+    body: "We don't speculate and hope. Every deal has a clear path — subdivision, entitlement, development — that creates value regardless of the market.",
+  },
+  {
+    icon: '🛠️',
+    title: 'No Tenants. No Repairs. No Surprises.',
+    body: "Land investing eliminates the operational headaches of traditional real estate. It's clean, simple, and scalable.",
+  },
+  {
+    icon: '♟️',
+    title: 'Multiple Ways to Win',
+    body: 'Flip, subdivide, develop, or hold. The strategy adapts to the deal. Your capital has options.',
+  },
+  {
+    icon: '📍',
+    title: 'Proven in Middle Tennessee',
+    body: "We operate exclusively in markets we know deeply. No chasing deals in places we've never been.",
+  },
+];
+---
+
+<section class="section bg-surface">
+  <div class="container-narrow">
+    <div class="text-center mb-14 md:mb-16 reveal">
+      <p class="eyebrow mb-4">The Thesis</p>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">Why Land? Why Now?</h2>
+      <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
+        Most investors overlook land. Smart business owners don't.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+      {pillars.map((p, i) => (
+        <div class={`reveal bg-bg-dark border border-border-dark rounded-2xl p-7 hover:border-gold/40 transition-colors ${i === 4 ? 'lg:col-start-2' : ''}`}>
+          <div class="text-4xl mb-4" aria-hidden="true">{p.icon}</div>
+          <h3 class="font-display text-xl md:text-2xl text-white mb-3 leading-tight">{p.title}</h3>
+          <p class="text-text-muted leading-relaxed text-sm md:text-base">{p.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

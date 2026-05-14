@@ -1,0 +1,61 @@
+---
+const faqs = [
+  {
+    q: 'What is the minimum investment?',
+    a: "Minimums vary by deal. We discuss this on our introductory call once we've had a chance to learn about your goals.",
+  },
+  {
+    q: 'How is my investment secured?',
+    a: 'Investments are typically secured by a Deed of Trust on the underlying land. You have a recorded security interest in the real property.',
+  },
+  {
+    q: 'How long is my capital deployed?',
+    a: 'Deal timelines vary. Most of our projects are structured with a defined exit timeline. We discuss this in detail before any capital is placed.',
+  },
+  {
+    q: 'What return can I expect?',
+    a: "Returns vary by deal and structure. We discuss specific return expectations on our introductory call — we don't publish numbers publicly.",
+  },
+  {
+    q: 'What exactly do you invest in?',
+    a: "Raw land in Middle Tennessee — acquisitions, minor subdivides, entitlement projects, and flips. We are land specialists. We don't do rentals, commercial, or fix-and-flip homes.",
+  },
+  {
+    q: 'Do I need to be an accredited investor?',
+    a: 'We work primarily with people we know or who come through trusted referrals. We discuss your investor status on our introductory call.',
+  },
+  {
+    q: 'How do I get paid?',
+    a: 'Returns are typically paid at deal close or per the terms outlined in the investment agreement for your specific deal.',
+  },
+  {
+    q: 'How do I get started?',
+    a: 'Click "Request an Invitation" and fill out a short form. We\'ll review it and reach out personally within a few business days.',
+  },
+];
+---
+
+<section class="section bg-bg-dark">
+  <div class="container-narrow max-w-4xl">
+    <div class="text-center mb-12 md:mb-14 reveal">
+      <p class="eyebrow mb-4">Questions</p>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-white">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="space-y-3">
+      {faqs.map((item) => (
+        <details class="reveal group bg-surface border border-border-dark rounded-2xl overflow-hidden hover:border-gold/30 transition-colors">
+          <summary class="flex items-center justify-between cursor-pointer p-5 md:p-6 list-none">
+            <h3 class="font-display text-lg md:text-xl text-white pr-6 leading-snug">{item.q}</h3>
+            <svg class="w-5 h-5 text-gold flex-shrink-0 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </summary>
+          <div class="px-5 md:px-6 pb-5 md:pb-6 -mt-1">
+            <p class="text-text-muted leading-relaxed">{item.a}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

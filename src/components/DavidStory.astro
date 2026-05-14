@@ -1,0 +1,73 @@
+---
+const paragraphs = [
+  'I did everything right.',
+  'At 19, I got my real estate license in Arizona and went to work for a homebuilder. By the time I was in my mid-twenties, I had helped sell over $60 million in starter homes. I understood real estate. I understood what people wanted.',
+  'Then 2008 happened.',
+  "I had cashed out my entire 401k and IRA — took every penalty — and put everything into a house. I didn't know you could do self-directed accounts without the penalties. I didn't know I was buying at the absolute top of the market. By the time we closed, the property was worth about sixty cents on the dollar.",
+  'I was wiped out.',
+  'So I did what dreamers do. I pivoted. I spent the next two decades producing films — five movies and a TV series. I learned how to assemble teams, manage multi-million dollar budgets, and take a complex project from concept to completion. Every year. Every time.',
+  'But the only times I ever truly built wealth were through real estate.',
+  'In 2021, something clicked. I found three riverfront lots in Texas — all three for $45,000 total. I sold each one for $45,000 individually. Then I won an auction for a one-acre parcel just north of a small downtown for $24,000. Six months later I sold it for $94,000.',
+  'The land flipping bug hit hard.',
+  'I realized the same skills I use to produce a film — find the opportunity, assemble the right team, manage the capital, execute the plan, deliver — translate directly to land development. The projects are different. The discipline is identical.',
+  "Now I operate exclusively in Middle Tennessee, acquiring, subdividing, and developing land. I have a movie coming out in theaters at the end of 2026. But this — land — is how I'm building a legacy for my family.",
+  "And it's how I'm helping other people do the same.",
+];
+---
+
+<section class="section bg-surface">
+  <div class="container-narrow">
+    <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+
+      <!-- Photo column -->
+      <div class="reveal lg:col-span-2 lg:sticky lg:top-28">
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gold/10 blur-2xl rounded-full" aria-hidden="true"></div>
+          <div class="relative aspect-[4/5] rounded-2xl overflow-hidden border border-border-dark bg-bg-dark">
+            <!-- Placeholder portrait -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6" style="background: linear-gradient(155deg, #0F2040 0%, #0A1628 100%);">
+              <svg class="w-20 h-20 text-white/15 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+              </svg>
+              <p class="text-white/40 text-xs tracking-[0.2em]">HEADSHOT</p>
+              <p class="text-white/30 text-xs mt-1">Coming soon</p>
+            </div>
+          </div>
+          <div class="mt-4 text-center">
+            <p class="font-display text-2xl text-white">David Stone</p>
+            <p class="text-sm text-gold/90 mt-1">Founder, A Lot of Land LLC</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story column -->
+      <div class="reveal lg:col-span-3">
+        <p class="eyebrow mb-4">The Story</p>
+        <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-8 leading-tight">
+          Who Is David Stone?
+        </h2>
+
+        <div class="space-y-5 text-white/85 text-base md:text-lg leading-relaxed">
+          {paragraphs.map((p, i) => {
+            const standout = p.length < 70;
+            return standout ? (
+              <p class="font-display text-2xl md:text-3xl text-gold leading-snug !my-8">{p}</p>
+            ) : (
+              <p>{p}</p>
+            );
+          })}
+        </div>
+
+        <div class="mt-10 p-6 md:p-7 rounded-2xl bg-bg-dark border-l-4 border-gold">
+          <p class="font-display text-lg md:text-xl text-white leading-snug italic">
+            "Nobody is making more land. Young couples deserve a shot at owning a piece of it. Business owners deserve a place to put their capital that's real, tangible, and not tied to a ticker symbol. That's what I'm building — one deal at a time."
+          </p>
+        </div>
+
+        <div class="mt-10">
+          <a href="/request-invitation" class="btn-gold text-base">Get to Know Us — Request an Invitation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

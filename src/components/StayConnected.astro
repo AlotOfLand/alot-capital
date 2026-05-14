@@ -1,0 +1,36 @@
+---
+const socials = [
+  { name: 'LinkedIn', handle: '@DavidTheLandGuy', href: 'https://linkedin.com/in/davidthelandguy', icon: 'in' },
+  { name: 'Instagram', handle: '@DavidTheLandGuy', href: 'https://instagram.com/davidthelandguy', icon: 'ig' },
+  { name: 'YouTube', handle: '@DavidTheLandGuy', href: 'https://youtube.com/@davidthelandguy', icon: 'yt' },
+];
+---
+
+<section class="section bg-surface">
+  <div class="container-narrow max-w-4xl text-center">
+    <div class="reveal">
+      <p class="eyebrow mb-4">Follow Along</p>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6">Stay Connected</h2>
+      <p class="text-base md:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed mb-12">
+        Follow along as we document deals, share market insights from Middle Tennessee, and build this thing in public. The best way to know us is to watch us work.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto reveal">
+      {socials.map((s) => (
+        <a
+          href={s.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group flex flex-col items-center gap-2 bg-bg-dark border border-border-dark rounded-2xl p-6 hover:border-gold/50 hover:-translate-y-0.5 transition-all"
+        >
+          <span class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold font-bold text-sm group-hover:bg-gold group-hover:text-bg-dark transition-colors">
+            {s.icon}
+          </span>
+          <span class="font-display text-white text-lg">{s.name}</span>
+          <span class="text-xs text-text-muted">{s.handle}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

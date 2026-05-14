@@ -1,0 +1,95 @@
+---
+---
+
+<section id="lead-magnet" class="section bg-bg-dark relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle at 70% 20%, #F5B800 0, transparent 40%), radial-gradient(circle at 20% 80%, #3b55a3 0, transparent 40%);"></div>
+
+  <div class="relative container-narrow">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <!-- E-book mockup -->
+      <div class="reveal flex justify-center order-2 lg:order-1">
+        <div class="relative w-72 md:w-80">
+          <!-- Glow -->
+          <div class="absolute -inset-8 bg-gold/10 blur-3xl rounded-full" aria-hidden="true"></div>
+          <!-- Book "cover" placeholder -->
+          <div class="relative aspect-[3/4] rounded-2xl shadow-2xl shadow-black/50 overflow-hidden transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500" style="background: linear-gradient(155deg, #0F2040 0%, #1a3060 50%, #3b55a3 100%);">
+            <div class="absolute inset-0 flex flex-col p-8 text-center">
+              <p class="text-gold text-xs tracking-[0.25em] font-semibold mb-4">FREE GUIDE</p>
+              <div class="flex-1 flex flex-col justify-center">
+                <h3 class="font-display text-white text-2xl md:text-3xl leading-tight mb-3">
+                  The Private Investor's Guide to Land
+                </h3>
+                <div class="w-12 h-px bg-gold mx-auto my-4"></div>
+                <p class="text-white/80 text-sm leading-snug">
+                  5 Reasons Smart Business Owners Are Backing Land Development Right Now
+                </p>
+              </div>
+              <p class="text-white/60 text-[10px] tracking-widest mt-auto pt-4 border-t border-white/10">
+                ALOT.CAPITAL · MIDDLE TENNESSEE
+              </p>
+            </div>
+            <!-- Spine highlight -->
+            <div class="absolute left-0 inset-y-0 w-2 bg-black/20"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copy + form -->
+      <div class="reveal order-1 lg:order-2">
+        <p class="eyebrow mb-4">The Free Guide</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-5">
+          If you are looking to protect your capital, earn passive income, and grow your wealth — you are in the right place.
+        </h2>
+        <p class="text-white/75 text-base md:text-lg leading-relaxed mb-8">
+          alot.capital is a private community of investors creating long-term wealth through strategic land investments in Middle Tennessee. We don't work with everyone — but when it's a fit, we work hard to make it exceptional.
+        </p>
+
+        <form
+          name="lead-magnet"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="bg-surface border border-border-dark rounded-2xl p-6 md:p-7 space-y-4"
+        >
+          <input type="hidden" name="form-name" value="lead-magnet" />
+          <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div>
+            <label for="lm-firstName" class="block text-sm font-medium text-white/85 mb-1.5">First Name</label>
+            <input
+              id="lm-firstName"
+              name="firstName"
+              type="text"
+              required
+              class="w-full bg-bg-dark border border-border-dark rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+              placeholder="Your first name"
+            />
+          </div>
+
+          <div>
+            <label for="lm-email" class="block text-sm font-medium text-white/85 mb-1.5">Email Address</label>
+            <input
+              id="lm-email"
+              name="email"
+              type="email"
+              required
+              class="w-full bg-bg-dark border border-border-dark rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <button type="submit" class="btn-gold w-full text-base">
+            Send Me the Free Guide
+          </button>
+
+          <p class="text-xs text-text-muted text-center leading-relaxed pt-1">
+            Due to deal flow and capacity, new investor relationships are reviewed on a rolling basis. Accepted investors are notified on a first-come, first-served basis.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

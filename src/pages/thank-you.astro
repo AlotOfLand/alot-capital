@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Replace with real Calendly link once set up.
+const calendlyUrl = '';
+---
+
+<Layout
+  title="You're In | alot.capital"
+  description="Thank you for requesting an invitation. Book a quick introduction call with David."
+>
+  <section class="topo-bg min-h-[60vh] flex items-center pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/15 border border-gold/40 text-gold mb-8">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <p class="eyebrow mb-4">Application Received</p>
+      <h1 class="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-8 leading-tight">
+        You're In.
+      </h1>
+      <div class="text-base md:text-lg text-white/85 max-w-2xl mx-auto leading-relaxed space-y-4">
+        <p>
+          Thank you for reaching out. We've received your application and will be in touch within a few business days to set up a time to connect.
+        </p>
+        <p>
+          In the meantime, the best next step is to schedule a quick introduction call so we can get to know each other.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-surface !pt-12 md:!pt-16">
+    <div class="container-narrow max-w-3xl">
+      <div class="bg-bg-dark border border-border-dark rounded-2xl p-6 md:p-10">
+        {calendlyUrl ? (
+          <>
+            <div
+              class="calendly-inline-widget"
+              data-url={calendlyUrl}
+              style="min-width:320px;height:700px;"
+            ></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          </>
+        ) : (
+          <div class="text-center py-12">
+            <p class="font-display text-2xl md:text-3xl text-white mb-4">Calendly booking</p>
+            <p class="text-text-muted text-sm max-w-md mx-auto mb-6">
+              The booking calendar will appear here once Calendly is connected. In the meantime, David will reach out directly.
+            </p>
+            <a href="mailto:David@alot.capital" class="btn-outline text-sm">Email David Directly</a>
+          </div>
+        )}
+      </div>
+
+      <p class="text-center text-text-muted text-sm md:text-base mt-8 italic">
+        Not ready to book yet? No problem. We'll reach out to you directly.
+      </p>
+
+      <div class="text-center mt-10">
+        <a href="/" class="text-sm text-white/70 hover:text-gold transition-colors">← Back to home</a>
+      </div>
+    </div>
+  </section>
+</Layout>

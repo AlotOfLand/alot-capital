@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const investorOptions = ['Yes', 'No', 'Not sure — all are welcome'];
+const investAmountOptions = ['$10K–$25K', '$25K–$50K', '$50K–$100K', '$100K+', 'Just exploring'];
+const deployTimingOptions = ['Immediately', 'Within 3 months', 'Within 6 months', 'Just exploring'];
+const hearAboutOptions = ['LinkedIn', 'Instagram', 'Referral', 'Podcast', 'Google', 'Other'];
+---
+
+<Layout
+  title="Request an Invitation | alot.capital"
+  description="Apply to join the alot.capital private investor community. Land investments in Middle Tennessee with direct access to David Stone."
+>
+  <!-- Hidden form for Netlify to register -->
+  <form name="investor-application" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="firstName" />
+    <input type="text" name="lastName" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="text" name="accreditedInvestor" />
+    <input type="text" name="investmentAmount" />
+    <input type="text" name="deployTiming" />
+    <input type="text" name="howHeard" />
+  </form>
+
+  <section class="topo-bg min-h-[40vh] flex items-center pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="eyebrow mb-4">Private Investor Application</p>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+        Request an Invitation
+      </h1>
+      <p class="text-lg md:text-xl text-white/85 max-w-2xl mx-auto leading-relaxed mb-5">
+        If you are looking to protect your capital, earn passive income, and grow your wealth — you are in the right place.
+      </p>
+      <p class="text-base md:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+        alot.capital is a private community of investors creating long-term wealth through land investments in Middle Tennessee. We don't work with everyone. But when it's a fit, we work hard to make it great for you.
+      </p>
+    </div>
+  </section>
+
+  <section class="section bg-surface !pt-12 md:!pt-16">
+    <div class="container-narrow max-w-2xl">
+      <form
+        name="investor-application"
+        method="POST"
+        action="/thank-you"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="bg-bg-dark border border-border-dark rounded-2xl p-6 md:p-10 space-y-6"
+      >
+        <input type="hidden" name="form-name" value="investor-application" />
+        <p class="hidden">
+          <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="firstName" class="block text-sm font-medium text-white/85 mb-1.5">First Name <span class="text-gold">*</span></label>
+            <input
+              id="firstName"
+              name="firstName"
+              type="text"
+              required
+              class="w-full bg-surface border border-border-dark rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+            />
+          </div>
+          <div>
+            <label for="lastName" class="block text-sm font-medium text-white/85 mb-1.5">Last Name <span class="text-gold">*</span></label>
+            <input
+              id="lastName"
+              name="lastName"
+              type="text"
+              required
+              class="w-full bg-surface border border-border-dark rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-white/85 mb-1.5">Email Address <span class="text-gold">*</span></label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            class="w-full bg-surface border border-border-dark rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+            placeholder="you@example.com"
+          />
+        </div>
+
+        <div>
+          <label for="phone" class="block text-sm font-medium text-white/85 mb-1.5">Phone Number <span class="text-gold">*</span></label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            required
+            class="w-full bg-surface border border-border-dark rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+            placeholder="(615) 555-0123"
+          />
+        </div>
+
+        <div>
+          <label for="accreditedInvestor" class="block text-sm font-medium text-white/85 mb-1.5">Are you an accredited investor?</label>
+          <select
+            id="accreditedInvestor"
+            name="accreditedInvestor"
+            class="w-full bg-surface border border-border-dark rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+          >
+            <option value="">Select one…</option>
+            {investorOptions.map((o) => <option value={o}>{o}</option>)}
+          </select>
+        </div>
+
+        <div>
+          <label for="investmentAmount" class="block text-sm font-medium text-white/85 mb-1.5">How much are you considering investing?</label>
+          <select
+            id="investmentAmount"
+            name="investmentAmount"
+            class="w-full bg-surface border border-border-dark rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+          >
+            <option value="">Select a range…</option>
+            {investAmountOptions.map((o) => <option value={o}>{o}</option>)}
+          </select>
+        </div>
+
+        <div>
+          <label for="deployTiming" class="block text-sm font-medium text-white/85 mb-1.5">When are you looking to deploy capital?</label>
+          <select
+            id="deployTiming"
+            name="deployTiming"
+            class="w-full bg-surface border border-border-dark rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+          >
+            <option value="">Select timing…</option>
+            {deployTimingOptions.map((o) => <option value={o}>{o}</option>)}
+          </select>
+        </div>
+
+        <div>
+          <label for="howHeard" class="block text-sm font-medium text-white/85 mb-1.5">How did you hear about us?</label>
+          <select
+            id="howHeard"
+            name="howHeard"
+            class="w-full bg-surface border border-border-dark rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+          >
+            <option value="">Select one…</option>
+            {hearAboutOptions.map((o) => <option value={o}>{o}</option>)}
+          </select>
+        </div>
+
+        <button type="submit" class="btn-gold w-full text-base !py-4">
+          Submit My Application
+        </button>
+
+        <p class="text-xs text-text-muted text-center leading-relaxed">
+          Due to demand, new applicants are currently being placed on our waitlist. New opportunities are sent on a first-come, first-served basis.
+        </p>
+      </form>
+    </div>
+  </section>
+</Layout>
