@@ -21,6 +21,10 @@ const {
 
 const siteOrigin = 'https://alot.capital';
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
+
+// A2P 10DLC: exclude chat widget from pages with phone-collecting forms.
+const path = Astro.url.pathname;
+const suppressChatWidget = path.startsWith('/request-invitation');
 const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${siteOrigin}${ogImage}`;
 
 const orgJsonLd = {
@@ -86,12 +90,14 @@ const orgJsonLd = {
     </main>
     {!hideFooter && <Footer />}
 
-    <!-- GoHighLevel chat widget (also serves as SMS opt-in per A2P 10DLC registration) -->
-    <script
-      src="https://widgets.leadconnectorhq.com/loader.js"
-      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-      data-widget-id="6a4eda4488718db6dd50a831"
-    ></script>
+    <!-- GoHighLevel chat widget (SMS opt-in per A2P 10DLC). Suppressed on pages with phone-collecting forms. -->
+    {!suppressChatWidget && (
+      <script
+        src="https://widgets.leadconnectorhq.com/loader.js"
+        data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="6a4eda4488718db6dd50a831"
+      />
+    )}
 
     <script is:inline>
       // Reveal-on-scroll using IntersectionObserver
