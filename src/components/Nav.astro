@@ -10,12 +10,17 @@ const isHome = currentPath === '/';
         <img src="/images/logo-wide.png" alt="alot.capital" class="h-12 md:h-16 w-auto" />
       </a>
 
-      <div class="hidden md:flex items-center gap-4">
+      <div class="hidden md:flex items-center gap-5">
         {isHome && (
-          <a href="#lead-magnet" class="text-sm text-white/80 hover:text-white transition-colors font-medium">
-            Free Guide
-          </a>
+          <>
+            <a href="#why-land" class="text-sm text-white/70 hover:text-white transition-colors">Why Land</a>
+            <a href="#how-it-works" class="text-sm text-white/70 hover:text-white transition-colors">How It Works</a>
+            <a href="#faq" class="text-sm text-white/70 hover:text-white transition-colors">FAQ</a>
+          </>
         )}
+        <a href="/#lead-magnet" class="text-sm text-white/85 hover:text-gold transition-colors font-medium">
+          Free Guide
+        </a>
         <a href="/request-invitation" class="btn-gold !px-5 !py-2.5 text-sm animate-gold-pulse">
           Request an Invitation
         </a>
@@ -33,11 +38,16 @@ const isHome = currentPath === '/';
   </div>
 
   <div id="mobile-menu" class="md:hidden hidden border-t border-border-dark bg-bg-dark">
-    <div class="px-4 py-4 space-y-3">
+    <div class="px-4 py-4 space-y-2">
       {isHome && (
-        <a href="#lead-magnet" class="block py-2 text-white/90 font-medium">Free Guide</a>
+        <>
+          <a href="#why-land" class="block py-2 text-white/85">Why Land</a>
+          <a href="#how-it-works" class="block py-2 text-white/85">How It Works</a>
+          <a href="#faq" class="block py-2 text-white/85">FAQ</a>
+        </>
       )}
-      <a href="/request-invitation" class="block btn-gold text-center">
+      <a href="/#lead-magnet" class="block py-2 text-white/90 font-medium">Free Guide</a>
+      <a href="/request-invitation" class="block btn-gold text-center mt-3">
         Request an Invitation
       </a>
     </div>

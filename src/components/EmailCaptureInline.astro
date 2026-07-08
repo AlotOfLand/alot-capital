@@ -1,0 +1,45 @@
+---
+---
+
+<section class="py-16 md:py-20 bg-bg-dark border-y border-border-dark">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="reveal">
+      <p class="eyebrow mb-4">Last chance to take the guide</p>
+      <h2 class="font-display text-3xl md:text-4xl text-white leading-tight mb-4">
+        Still reading? Grab the guide first.
+      </h2>
+      <p class="text-white/70 text-base md:text-lg max-w-xl mx-auto mb-8">
+        88 questions. The same checklist we hold our own deals to. Yours in one click.
+      </p>
+
+      <form
+        name="lead-magnet"
+        method="POST"
+        action="/thank-you-guide"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="max-w-lg mx-auto flex flex-col sm:flex-row gap-3 bg-surface border border-border-dark rounded-2xl p-3"
+      >
+        <input type="hidden" name="form-name" value="lead-magnet" />
+        <p class="hidden">
+          <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+        <input type="hidden" name="firstName" value="Friend" />
+        <label for="ec-email" class="sr-only">Email address</label>
+        <input
+          id="ec-email"
+          name="email"
+          type="email"
+          required
+          placeholder="you@example.com"
+          class="flex-1 bg-bg-dark border border-border-dark rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+        />
+        <input type="hidden" name="consent" value="yes" />
+        <button type="submit" class="btn-gold whitespace-nowrap">Send Me the Guide</button>
+      </form>
+      <p class="text-xs text-text-muted mt-4">
+        By submitting, you agree to receive the guide and occasional updates. See our <a href="/privacy" class="underline hover:text-white">privacy policy</a>.
+      </p>
+    </div>
+  </div>
+</section>

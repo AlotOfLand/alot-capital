@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Your Guide is Ready | alot.capital"
+  description="Your copy of 88 Questions to Ask Before You Fund a Land Deal is ready to download."
+  noindex={true}
+>
+  <section class="topo-bg min-h-[60vh] flex items-center pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/15 border border-gold/40 text-gold mb-8">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <p class="eyebrow mb-4">You're on the list</p>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-8 leading-tight">
+        Your guide is ready.
+      </h1>
+      <p class="text-base md:text-lg text-white/85 max-w-2xl mx-auto leading-relaxed mb-10">
+        A copy is on the way to your inbox. If you want it right now, download it here.
+      </p>
+
+      <a
+        href="/downloads/88-questions.pdf"
+        download
+        class="btn-gold text-base sm:text-lg !px-8 !py-4 animate-gold-pulse"
+      >
+        Download the Guide (PDF)
+      </a>
+
+      <p class="text-xs text-text-muted mt-6">1 MB · 11 pages · Read time ~10 minutes</p>
+    </div>
+  </section>
+
+  <section class="section bg-surface !pt-12 md:!pt-20">
+    <div class="container-narrow max-w-3xl text-center">
+      <div class="bg-bg-dark border border-border-dark rounded-2xl p-8 md:p-12">
+        <p class="eyebrow mb-4">Ready sooner than you thought?</p>
+        <h2 class="font-display text-3xl md:text-4xl text-white leading-tight mb-5">
+          Take the guide. Ask us any of the 88.
+        </h2>
+        <p class="text-white/75 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+          If reading it makes you want to talk, request an invitation and we'll set up a short call. No pitch, no numbers on the table — just a fit check.
+        </p>
+        <a href="/request-invitation" class="btn-gold text-base">Request an Invitation</a>
+      </div>
+
+      <p class="text-center text-sm text-white/60 mt-10">
+        <a href="/" class="hover:text-gold transition-colors">← Back to home</a>
+      </p>
+    </div>
+  </section>
+</Layout>

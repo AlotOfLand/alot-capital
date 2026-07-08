@@ -8,6 +8,7 @@ const calendlyUrl = '';
 <Layout
   title="You're In | alot.capital"
   description="Thank you for requesting an invitation. Book a quick introduction call with David."
+  noindex={true}
 >
   <section class="topo-bg min-h-[60vh] flex items-center pt-16 pb-12 md:pt-24 md:pb-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -55,9 +56,14 @@ const calendlyUrl = '';
         )}
       </div>
 
-      <p class="text-center text-text-muted text-sm md:text-base mt-8 italic">
-        Not ready to book yet? No problem. We'll reach out to you directly.
-      </p>
+      <div class="mt-10 text-center">
+        <p class="text-text-muted text-sm md:text-base italic mb-4">
+          Not ready to book yet? No problem — we'll reach out to you directly.
+        </p>
+        <p class="text-white/70 text-sm">
+          Haven't read the guide yet? <a href="/downloads/88-questions.pdf" class="text-gold hover:underline" download>Download the 88 Questions →</a>
+        </p>
+      </div>
 
       <div class="text-center mt-10">
         <a href="/" class="text-sm text-white/70 hover:text-gold transition-colors">← Back to home</a>

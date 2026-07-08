@@ -10,26 +10,24 @@
       <!-- E-book mockup -->
       <div class="reveal flex justify-center order-2 lg:order-1">
         <div class="relative w-72 md:w-80">
-          <!-- Glow -->
           <div class="absolute -inset-8 bg-gold/10 blur-3xl rounded-full" aria-hidden="true"></div>
-          <!-- Book "cover" placeholder -->
           <div class="relative aspect-[3/4] rounded-2xl shadow-2xl shadow-black/50 overflow-hidden transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500" style="background: linear-gradient(155deg, #0F2040 0%, #1a3060 50%, #3b55a3 100%);">
             <div class="absolute inset-0 flex flex-col p-8 text-center">
-              <p class="text-gold text-xs tracking-[0.25em] font-semibold mb-4">FREE GUIDE</p>
+              <p class="text-gold text-xs tracking-[0.25em] font-semibold mb-4">THE PASSIVE INVESTOR'S FIELD GUIDE</p>
               <div class="flex-1 flex flex-col justify-center">
-                <h3 class="font-display text-white text-2xl md:text-3xl leading-tight mb-3">
-                  The Private Investor's Guide to Land
+                <p class="font-display text-gold text-7xl md:text-8xl leading-none mb-2">88<span class="text-4xl align-top">?</span></p>
+                <h3 class="font-display text-white text-2xl md:text-3xl leading-tight mt-2 mb-3">
+                  Questions to Ask <em class="text-gold not-italic">Before</em> You Fund a Land Deal
                 </h3>
                 <div class="w-12 h-px bg-gold mx-auto my-4"></div>
-                <p class="text-white/80 text-sm leading-snug">
-                  5 Reasons Smart Business Owners Are Backing Land Development Right Now
+                <p class="text-white/80 text-xs md:text-sm leading-snug">
+                  The exact due-diligence questions I run on every parcel.
                 </p>
               </div>
               <p class="text-white/60 text-[10px] tracking-widest mt-auto pt-4 border-t border-white/10">
-                ALOT.CAPITAL · MIDDLE TENNESSEE
+                DAVID A. STONE · ALOT.CAPITAL
               </p>
             </div>
-            <!-- Spine highlight -->
             <div class="absolute left-0 inset-y-0 w-2 bg-black/20"></div>
           </div>
         </div>
@@ -39,15 +37,19 @@
       <div class="reveal order-1 lg:order-2">
         <p class="eyebrow mb-4">The Free Guide</p>
         <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-5">
-          If you are looking to protect your capital, earn passive income, and grow your wealth — you are in the right place.
+          88 Questions to ask <em class="text-gold not-italic">before</em> you fund a land deal.
         </h2>
+        <p class="text-white/75 text-base md:text-lg leading-relaxed mb-6">
+          Most people who lose money on a land deal don't lose it to a con artist. They lose it to a good person with a great story who never walked the corners of the property.
+        </p>
         <p class="text-white/75 text-base md:text-lg leading-relaxed mb-8">
-          alot.capital is a private community of investors creating long-term wealth through strategic land investments in Middle Tennessee. We don't work with everyone — but when it's a fit, we work hard to make it exceptional.
+          This is the checklist I use on every parcel — the same 88 questions I hold my own projects to. Use it to vet <em class="not-italic font-semibold text-white">any</em> land sponsor. There is no deal in these pages, and there is no sales pitch. Just the checklist.
         </p>
 
         <form
           name="lead-magnet"
           method="POST"
+          action="/thank-you-guide"
           data-netlify="true"
           netlify-honeypot="bot-field"
           class="bg-surface border border-border-dark rounded-2xl p-6 md:p-7 space-y-4"
@@ -81,12 +83,17 @@
             />
           </div>
 
+          <label class="flex items-start gap-3 text-xs text-text-muted cursor-pointer">
+            <input type="checkbox" name="consent" value="yes" required class="mt-0.5 accent-gold" />
+            <span>I agree to receive the guide and occasional updates from David at A Lot of Land LLC. Unsubscribe anytime.</span>
+          </label>
+
           <button type="submit" class="btn-gold w-full text-base">
-            Send Me the Free Guide
+            Send Me the Guide
           </button>
 
           <p class="text-xs text-text-muted text-center leading-relaxed pt-1">
-            Due to deal flow and capacity, new investor relationships are reviewed on a rolling basis. Accepted investors are notified on a first-come, first-served basis.
+            No spam. Never shared. See our <a href="/privacy" class="underline hover:text-white">privacy policy</a>.
           </p>
         </form>
       </div>

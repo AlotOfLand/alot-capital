@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Page Not Found | alot.capital"
+  description="This page doesn't exist. Head back home or grab the free guide."
+  noindex={true}
+>
+  <section class="topo-bg min-h-[70vh] flex items-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <p class="font-mono text-gold text-sm tracking-[0.3em] mb-6">404 · NOT FOUND</p>
+      <h1 class="font-display text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
+        This parcel doesn't exist.
+      </h1>
+      <p class="text-base md:text-lg text-white/80 max-w-xl mx-auto leading-relaxed mb-10">
+        The page you're looking for isn't here. Try one of these instead.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/" class="btn-gold text-base">Back to Home</a>
+        <a href="/#lead-magnet" class="btn-outline text-base">Get the Free Guide</a>
+      </div>
+    </div>
+  </section>
+</Layout>
