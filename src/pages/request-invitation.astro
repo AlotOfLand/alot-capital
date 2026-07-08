@@ -94,11 +94,12 @@ import Layout from '../layouts/Layout.astro';
             class="w-full bg-surface border border-border-dark rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
             placeholder="(615) 555-0123"
           />
+          <p class="mt-1.5 text-xs text-text-muted">Used to schedule an intro call. We do not send text messages from this form.</p>
         </div>
 
         <label class="flex items-start gap-3 text-xs text-text-muted cursor-pointer">
           <input type="checkbox" name="consent" value="yes" required class="mt-0.5 accent-gold" />
-          <span>I agree to be contacted by David at A Lot of Land LLC about my application and future investment opportunities. See our <a href="/privacy" class="underline hover:text-white">privacy policy</a>.</span>
+          <span>I agree to be contacted by David at A Lot of Land LLC via <strong class="text-white/85">email or phone call</strong> about my application. No text messages will be sent from this form. See our <a href="/privacy" class="underline hover:text-white">privacy policy</a>.</span>
         </label>
 
         <button type="submit" class="btn-gold w-full text-base !py-4">
